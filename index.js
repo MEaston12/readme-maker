@@ -59,6 +59,7 @@ ${licenses[answers.license]}
 
 ## Description
 ${answers.description}
+
 ## Table of Contents
 1. [Description](#description)
 2. [Table of Contents](#table-of-contents)
@@ -68,16 +69,22 @@ ${answers.description}
 6. [Testing](#testing)
 7. [License](#license)
 8. [Questions](#questions)
+
 ## Installation
 ${answers.installation}
+
 ## Usage
 ${answers.usage}
+
 ## Contribution
 ${answers.contribution}
+
 ## Testing
 ${answers.testing}
+
 ## License
 ${answers.license}
+
 ## Questions
 If you have any additional questions, contact me at:  
 Github: [${answers.contactName}](https://github.com/${answers.contactName})  
