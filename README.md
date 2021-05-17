@@ -5,6 +5,8 @@
 ## Description
 This is a project done for the University of Utah's Coding Bootcamp program to demonstrate my node.js programming abilities.  The project creates a fancy looking readme based on prompts given by the user.
 
+[Link to video to demonstrate functionality](https://drive.google.com/file/d/1bJT4AEDEad9FS5ar3zusguSIIyZvw6iq/preview)
+
 ## Table of Contents
 1. [Description](#description)
 2. [Table of Contents](#table-of-contents)
