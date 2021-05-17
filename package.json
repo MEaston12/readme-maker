@@ -1,0 +1,22 @@
+{
+  "name": "uucb-c9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MEaston12/UUCB-C9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MEaston12/UUCB-C9/issues"
+  },
+  "homepage": "https://github.com/MEaston12/UUCB-C9#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
