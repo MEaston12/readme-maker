@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const licenses = require('./refs/licenses.json');
 
-inquirer.prompt([
+inquirer.prompt([  //Could consider moving the prompt object to a json
     {
         name: 'projectName',
         message: 'What is the name of your project?',
@@ -52,7 +52,7 @@ inquirer.prompt([
     }
     ])
     .then(answers => {
-        const readmeStr = 
+        const readmeStr = //Just using one big template for the readme output
 `# ${answers.projectName}
 
 ${licenses[answers.license]}
@@ -90,7 +90,7 @@ If you have any additional questions, contact me at:
 Github: [${answers.contactName}](https://github.com/${answers.contactName})  
 Email: ${answers.contactEmail}
 `
-        fs.writeFileSync('./out/README.md', readmeStr);
+        fs.writeFileSync('./out/README.md', readmeStr);  //Program just writes to a single file location for now
         console.log(`Completed readme has been saved to ${__dirname}\\out\\README.md`);
     })
     .catch(error => {
