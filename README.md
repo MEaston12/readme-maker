@@ -14,16 +14,16 @@ This is a project done for the University of Utah's Coding Bootcamp program to d
 7. [License](#license)
 8. [Questions](#questions)
 ## Installation
-Clone this project to your local workspace, then run npm install in the folder.
+Clone this project to your local workspace, then run `npm install` in the folder.
 ## Usage
-Run `node index.js` in the project folder.
+Run `node index.js` in the project folder, then follow the prompts.
 ## Contribution
-Not expecting any contributions.
+No additional contributions expected.
 ## Testing
-Testing not necessary.
+If the program works then it works.
 ## License
 GNU GPL v3
 ## Questions
-If you have any additional questions, contact me at:
-Github: [MEaston12](https://github.com/MEaston12)
+If you have any additional questions, contact me at:  
+Github: [MEaston12](https://github.com/MEaston12)  
 Email: eastonmalcolm@gmail.com

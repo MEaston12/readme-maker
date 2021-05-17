@@ -79,8 +79,8 @@ ${answers.testing}
 ## License
 ${answers.license}
 ## Questions
-If you have any additional questions, contact me at:
-Github: [${answers.contactName}](https://github.com/${answers.contactName})
+If you have any additional questions, contact me at:  
+Github: [${answers.contactName}](https://github.com/${answers.contactName})  
 Email: ${answers.contactEmail}
 `
         fs.writeFileSync('./out/README.md', readmeStr);
