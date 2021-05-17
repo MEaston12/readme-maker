@@ -1,4 +1,8 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
+
+const licenses = require('./refs/licenses.json');
+
 inquirer.prompt([
     {
         name: 'projectName',
@@ -26,7 +30,7 @@ inquirer.prompt([
         validate: input => !!input
     },
     {
-        name: 'testInstructions',
+        name: 'testing',
         message: 'Explain how testing is meant to be done with your project.',
         validate: input => !!input
     },
@@ -34,11 +38,7 @@ inquirer.prompt([
         type: 'list',
         name: 'license',
         message: 'Which license are you using for this project?',
-        choices: [
-            'MIT',
-            'GNU GPLv3'
-        ],
-        validate: input => !!input
+        choices: Object.keys(licenses)
     },
     {
         name: 'contactName',
@@ -50,16 +50,48 @@ inquirer.prompt([
         message: 'Give an email address in case users have questions.',
         validate: input => !!input
     }
-  ])
-  .then(answers => {
-    // Use user feedback for... whatever!!
-    console.log(JSON.stringify(answers));
-  })
-  .catch(error => {
-    if(error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
-    }
-    console.log(error);
-  });
+    ])
+    .then(answers => {
+        const readmeStr = 
+`# ${answers.projectName}
+
+${licenses[answers.license]}
+
+## Description
+${answers.description}
+## Table of Contents
+1. [Description](#description)
+2. [Table of Contents](#table-of-contents)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contribution](#contribution)
+6. [Testing](#testing)
+7. [License](#license)
+8. [Questions](#questions)
+## Installation
+${answers.installation}
+## Usage
+${answers.usage}
+## Contribution
+${answers.contribution}
+## Testing
+${answers.testing}
+## License
+${answers.license}
+## Questions
+If you have any additional questions, contact me at:
+Github: [${answers.contactName}](https://github.com/${answers.contactName})
+Email: ${answers.contactEmail}
+`
+        fs.writeFileSync('./out/README.md', readmeStr);
+        console.log(`Completed readme has been saved to ${__dirname}\\out\\README.md`);
+    })
+    .catch(error => {
+        if(error.isTtyError) {
+            // Prompt couldn't be rendered in the current environment
+            console.log(error);
+        } else {
+            // Something else went wrong
+            console.log(error);
+        }
+    });
