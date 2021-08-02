@@ -1,21 +1,22 @@
 {
-  "name": "uucb-c9",
+  "name": "readme-maker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MEaston12/UUCB-C9.git"
+    "url": "git+https://github.com/MEaston12/readme-maker.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MEaston12/UUCB-C9/issues"
+    "url": "https://github.com/MEaston12/readme-maker/issues"
   },
-  "homepage": "https://github.com/MEaston12/UUCB-C9#readme",
+  "homepage": "https://github.com/MEaston12/readme-maker#readme",
   "dependencies": {
     "inquirer": "^8.0.0"
   }
